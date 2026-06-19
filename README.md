@@ -112,7 +112,3 @@ Diabetes-Progression-Prediction-ANN/
 - Model evaluation using MSE and R² Score
 - Hyperparameter tuning and model improvement
 
-
-## License
-
-This project was developed as part of the Deep Learning Module End Assignment for academic purposes.
