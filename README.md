@@ -35,12 +35,6 @@ This project uses the Diabetes dataset provided by the Scikit-learn library.
 Dataset Link:
 https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset
 
-The dataset can be loaded directly using:
-
-```python
-from sklearn.datasets import load_diabetes
-
-diabetes = load_diabetes()
 ```
 
 ## Technologies Used
