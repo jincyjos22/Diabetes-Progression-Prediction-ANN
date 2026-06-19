@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project develops an Artificial Neural Network (ANN) model to predict diabetes progression using the Diabetes dataset from Scikit-learn. The model analyzes various patient-related features and estimates disease progression, helping demonstrate the application of deep learning in healthcare prediction tasks.
+This project develops an Artificial Neural Network (ANN) model to predict diabetes progression using the Diabetes dataset from Scikit-learn. The model analyzes various patient-related features and estimates disease progression using deep learning techniques.
 
 ## Objective
 
@@ -10,11 +10,11 @@ This project develops an Artificial Neural Network (ANN) model to predict diabet
 - Perform Exploratory Data Analysis (EDA).
 - Build an ANN model using TensorFlow/Keras.
 - Train and evaluate the model.
-- Improve model performance through experimentation with hyperparameters and architecture.
+- Improve model performance through experimentation with different hyperparameters and architectures.
 
 ## Dataset
 
-The dataset is available in the Scikit-learn library.
+This project uses the Diabetes dataset available in the Scikit-learn library.
 
 ### Features
 
@@ -27,6 +27,21 @@ The dataset is available in the Scikit-learn library.
 ### Target Variable
 
 - Quantitative measure of diabetes progression after one year.
+
+## Dataset Source
+
+This project uses the Diabetes dataset provided by the Scikit-learn library.
+
+Dataset Link:
+https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset
+
+The dataset can be loaded directly using:
+
+```python
+from sklearn.datasets import load_diabetes
+
+diabetes = load_diabetes()
+```
 
 ## Technologies Used
 
@@ -45,15 +60,15 @@ The dataset is available in the Scikit-learn library.
 
 - Loaded the Diabetes dataset from Scikit-learn.
 - Checked for missing values.
-- Normalized features using StandardScaler.
-- Prepared data for model training.
+- Normalized the features using StandardScaler.
+- Prepared the data for training and testing.
 
 ### 2. Exploratory Data Analysis (EDA)
 
-- Examined dataset structure and statistics.
+- Examined dataset structure and summary statistics.
 - Visualized feature distributions.
-- Analyzed correlations between features and target variable.
-- Generated plots for better understanding of the data.
+- Analyzed relationships between features and target variable.
+- Generated correlation heatmaps and plots.
 
 ### 3. ANN Model Development
 
@@ -77,15 +92,14 @@ Performance metrics used:
 
 ### 6. Model Improvement
 
-- Experimented with additional hidden layers.
+- Experimented with different hidden layers.
 - Tuned the number of neurons.
-- Adjusted learning rates and epochs.
-- Compared results before and after improvements.
+- Adjusted epochs and learning rates.
+- Compared model performance before and after improvements.
 
 ## Results
 
-The ANN model successfully learned patterns from the dataset and predicted diabetes progression with reasonable accuracy. Model performance was improved through hyperparameter tuning and architectural modifications.
-
+The ANN model successfully learned patterns from the Diabetes dataset and predicted disease progression with reasonable accuracy. Model performance was improved through hyperparameter tuning and architecture modifications.
 
 ## Repository Structure
 
@@ -100,10 +114,13 @@ Diabetes-Progression-Prediction-ANN/
 ## Key Learning Outcomes
 
 - Data preprocessing and normalization
-- Exploratory Data Analysis
-- Artificial Neural Networks
-- Regression using Deep Learning
-- Model evaluation and performance improvement
+- Exploratory Data Analysis (EDA)
+- Artificial Neural Networks (ANN)
+- Deep Learning for Regression
+- Model evaluation using MSE and R² Score
+- Hyperparameter tuning and model improvement
 
+
+## License
 
 This project was developed as part of the Deep Learning Module End Assignment for academic purposes.
