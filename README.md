@@ -35,8 +35,6 @@ This project uses the Diabetes dataset provided by the Scikit-learn library.
 Dataset Link:
 https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset
 
-```
-
 ## Technologies Used
 
 - Python
