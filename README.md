@@ -46,15 +46,13 @@ Created a Sequential Neural Network model.
 Added hidden layers with ReLU activation.
 Used a linear output layer for regression.
 4. Model Training
-Split data into training and testing sets.
-Used Adam optimizer.
-Used Mean Squared Error (MSE) loss function.
-Trained the model on training data.
+-Split data into training and testing sets.
+-Used Adam optimizer.
+-Used Mean Squared Error (MSE) loss function.
+-Trained the model on training data.
 5. Model Evaluation
-
-Performance was evaluated using:
-
-Mean Squared Error (MSE)
+-Performance was evaluated using:
+-Mean Squared Error (MSE)
 R² Score
 6. Model Improvement
 Experimented with additional hidden layers.
