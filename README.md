@@ -238,26 +238,6 @@ Measures how well the model explains the variance in the target variable.
 
 ---
 
-## 📸 Sample Outputs
-
-Example visualizations generated during the project:
-
-* Correlation Heatmap
-* Training Loss Curve
-* Validation Loss Curve
-* Actual vs Predicted Values Plot
-
-Optional folder structure:
-
-```text
-images/
-├── heatmap.png
-├── loss_curve.png
-├── predictions.png
-```
-
----
-
 ## 📁 Repository Structure
 
 ```text
@@ -267,8 +247,7 @@ Diabetes-Progression-Prediction-ANN/
 ├── README.md
 ├── requirements.txt
 ├── diabetes_ann_model.h5
-├── scaler.pkl
-└── images/
+└── scaler.pkl
 ```
 
 ---
@@ -287,7 +266,7 @@ This project successfully developed and evaluated Artificial Neural Network (ANN
 * Cross-validation
 * Model deployment using Flask or Streamlit
 * Comparison with other machine learning algorithms
-* Real-world healthcare dataset integration
+* Integration with larger real-world healthcare datasets
 
 ---
 
