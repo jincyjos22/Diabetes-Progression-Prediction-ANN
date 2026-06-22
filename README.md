@@ -1,41 +1,74 @@
-# Diabetes Progression Prediction using Artificial Neural Network (ANN)
+# 🩺 Diabetes Progression Prediction Using Artificial Neural Network (ANN)
 
-## Overview
+## 📖 Project Overview
 
-This project develops an Artificial Neural Network (ANN) model to predict diabetes progression using the Diabetes dataset from Scikit-learn. The model analyzes various patient-related features and estimates disease progression using deep learning techniques.
+This project implements an Artificial Neural Network (ANN) using TensorFlow and Keras to predict diabetes disease progression based on patient medical data. The objective is to build and evaluate neural network models capable of estimating disease progression using various clinical features.
 
-## Objective
+The project includes data preprocessing, exploratory data analysis (EDA), model development, training, evaluation, and performance comparison between different ANN architectures.
 
-- Load and preprocess the Diabetes dataset.
-- Perform Exploratory Data Analysis (EDA).
-- Build an ANN model using TensorFlow/Keras.
-- Train and evaluate the model.
-- Improve model performance through experimentation with different hyperparameters and architectures.
+---
 
-## Dataset
+## 📋 Table of Contents
 
-This project uses the Diabetes dataset available in the Scikit-learn library.
+- [📖 Project Overview](#-project-overview)
+- [🎯 Objective](#-objective)
+- [📂 Dataset](#-dataset)
+- [🛠 Technologies Used](#-technologies-used)
+- [📊 Exploratory Data Analysis](#-exploratory-data-analysis)
+- [🏗 Model Architecture](#-model-architecture)
+- [🚀 Installation](#-installation)
+- [📋 Requirements](#-requirements)
+- [▶️ Usage](#️-usage)
+- [📈 Results](#-results)
+- [📊 Performance Metrics](#-performance-metrics)
+- [📁 Repository Structure](#-repository-structure)
+- [🔮 Future Improvements](#-future-improvements)
+- [👩‍💻 Author](#-author)
+
+---
+
+## 🎯 Objective
+
+The primary objective of this project is to:
+
+- Understand and implement Artificial Neural Networks.
+- Perform exploratory data analysis on the Diabetes dataset.
+- Train ANN models for regression tasks.
+- Compare different ANN architectures.
+- Evaluate model performance using regression metrics.
+
+---
+
+## 📂 Dataset
+
+The project uses the Diabetes dataset available in Scikit-learn.
+
+### Dataset Characteristics
+
+- Number of Samples: 442
+- Number of Features: 10
+- Target Variable: Quantitative measure of diabetes progression one year after baseline
 
 ### Features
 
 - Age
 - Sex
 - Body Mass Index (BMI)
-- Blood Pressure
-- Six Blood Serum Measurements
+- Blood Pressure (BP)
+- S1
+- S2
+- S3
+- S4
+- S5
+- S6
 
-### Target Variable
+Dataset Source:
 
-- Quantitative measure of diabetes progression after one year.
+https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_diabetes.html
 
-## Dataset Source
+---
 
-This project uses the Diabetes dataset provided by the Scikit-learn library.
-
-Dataset Link:
-https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset
-
-## Technologies Used
+## 🛠 Technologies Used
 
 - Python
 - NumPy
@@ -45,70 +78,226 @@ https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset
 - Scikit-learn
 - TensorFlow
 - Keras
+- Jupyter Notebook
 
-## Project Workflow
+---
 
-### 1. Data Loading and Preprocessing
+## 📊 Exploratory Data Analysis
 
-- Loaded the Diabetes dataset from Scikit-learn.
-- Checked for missing values.
-- Normalized the features using StandardScaler.
-- Prepared the data for training and testing.
+The following analyses were performed:
 
-### 2. Exploratory Data Analysis (EDA)
+- Dataset overview
+- Statistical summary
+- Missing value check
+- Feature distributions
+- Correlation heatmap
+- Scatter plots
+- Feature relationship analysis
 
-- Examined dataset structure and summary statistics.
-- Visualized feature distributions.
-- Analyzed relationships between features and target variable.
-- Generated correlation heatmaps and plots.
+Visualizations help understand feature importance and relationships within the dataset.
 
-### 3. ANN Model Development
+---
 
-- Built a Sequential Neural Network model.
-- Added hidden layers with ReLU activation.
-- Used a linear activation function in the output layer for regression.
+## 🏗 Model Architecture
 
-### 4. Model Training
+### Basic ANN Model
 
-- Split the dataset into training and testing sets.
-- Used Adam optimizer.
-- Used Mean Squared Error (MSE) as the loss function.
-- Trained the ANN model on training data.
+Input Layer
 
-### 5. Model Evaluation
+↓  
 
-Performance metrics used:
+Dense Layer (64 neurons, ReLU)
+
+↓  
+
+Dense Layer (32 neurons, ReLU)
+
+↓  
+
+Output Layer (1 neuron)
+
+---
+
+### Improved ANN Model
+
+Input Layer
+
+↓  
+
+Dense Layer (128 neurons, ReLU)
+
+↓  
+
+Dense Layer (64 neurons, ReLU)
+
+↓  
+
+Dense Layer (32 neurons, ReLU)
+
+↓  
+
+Output Layer (1 neuron)
+
+---
+
+## 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/jincyjos22/Diabetes-Progression-Prediction-ANN.git
+```
+
+Navigate to project directory:
+
+```bash
+cd Diabetes-Progression-Prediction-ANN
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 📋 Requirements
+
+Create a file named `requirements.txt` containing:
+
+```text
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tensorflow
+keras
+jupyter
+```
+
+Install using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## ▶️ Usage
+
+Open Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```text
+ANN.ipynb
+```
+
+Run all cells sequentially to:
+
+- Load the dataset
+- Perform preprocessing
+- Train ANN models
+- Evaluate performance
+- Visualize results
+
+---
+
+## 📈 Results
+
+The models were evaluated using:
 
 - Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
 - R² Score
 
-### 6. Model Improvement
+The improved ANN architecture achieved better predictive performance compared to the basic ANN model.
 
-- Experimented with different hidden layers.
-- Tuned the number of neurons.
-- Adjusted epochs and learning rates.
-- Compared model performance before and after improvements.
+---
 
-## Results
+## 📊 Performance Metrics
 
-The ANN model successfully learned patterns from the Diabetes dataset and predicted disease progression with reasonable accuracy. Model performance was improved through hyperparameter tuning and architecture modifications.
+Metrics used:
 
-## Repository Structure
+### Mean Squared Error (MSE)
+
+Measures average squared prediction error.
+
+### Root Mean Squared Error (RMSE)
+
+Provides error in the same units as the target variable.
+
+### R² Score
+
+Measures how well the model explains the variance in the target variable.
+
+---
+
+## 📸 Sample Outputs
+
+Include screenshots of:
+
+- Training Loss Curve
+- Validation Loss Curve
+- Correlation Heatmap
+- Actual vs Predicted Values Plot
+
+Store images in:
+
+```text
+images/
+```
+
+Example:
+
+```text
+images/
+├── loss_curve.png
+├── heatmap.png
+├── predictions.png
+```
+
+---
+
+## 📁 Repository Structure
 
 ```text
 Diabetes-Progression-Prediction-ANN/
 │
 ├── ANN.ipynb
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+│
+└── images/
+    ├── loss_curve.png
+    ├── heatmap.png
+    └── predictions.png
 ```
 
-## Key Learning Outcomes
 
-- Data preprocessing and normalization
-- Exploratory Data Analysis (EDA)
-- Artificial Neural Networks (ANN)
-- Deep Learning for Regression
-- Model evaluation using MSE and R² Score
-- Hyperparameter tuning and model improvement
+## 🔮 Future Improvements
 
+- Hyperparameter tuning
+- Early stopping
+- Dropout regularization
+- Cross-validation
+- Model deployment using Flask or Streamlit
+- Comparison with other machine learning algorithms
+
+---
+## ⭐ Acknowledgements
+
+- Scikit-learn Diabetes Dataset
+- TensorFlow Documentation
+- Keras Documentation
+- Open-source Machine Learning Community
+
+---
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
